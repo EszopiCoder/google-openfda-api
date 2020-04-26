@@ -58,9 +58,9 @@ function API_RequestByNDC(searchField) {
         var IngrName = "N/A";
         var IngrStrength = "N/A";
       }
-      // Determine if drug route exists
+      // Concatenate route
       if (drugData.route instanceof Object) {
-        var Route = drugData.route[0];
+        var Route = drugData.route.map(function(a){return a}).join(", ");
       } else {
         var Route = "N/A";
       }
